@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Portfolio Tracker</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <div class="bg-white shadow-lg rounded-lg p-8">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold text-gray-800">Stock Portfolio Tracker</h1>
+                <input 
+                    id="searchInput" 
+                    type="text" 
+                    placeholder="Search stocks..." 
+                    class="px-4 py-2 border rounded-md w-64"
+                >
+                <button 
+                    id="refreshBtn" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                >
+                    Refresh Data
+                </button>
+            </div>
+
+            <!-- Stock Table -->
+            <div class="overflow-x-auto">
+                <table id="stockTable" class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="p-3 text-left">Stock</th>
+                            <th class="p-3 text-right">Current Price</th>
+                            <th class="p-3 text-right">Change %</th>
+                            <th class="p-3 text-right">Market Cap</th>
+                            <th class="p-3 text-center">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockTableBody">
+                        <!-- Data will be inserted dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Portfolio Summary -->
+            <div id="portfolioSummary" class="mt-6 bg-gray-50 p-4 rounded-md">
+                <p class="text-lg"><strong>Total Portfolio Value:</strong> <span id="totalValue">₹0</span></p>
+                <p class="text-lg"><strong>Total Gain/Loss:</strong> <span id="totalGain">₹0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script type="module" src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
