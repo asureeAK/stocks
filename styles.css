@@ -1,0 +1,20 @@
+/* Status Colors */
+.status-Buy { background-color: #d1fae5; color: #065f46; }   /* Green */
+.status-Sell { background-color: #fee2e2; color: #991b1b; }  /* Red */
+.status-Hold { background-color: #fef3c7; color: #92400e; }  /* Yellow */
+.status-N/A { background-color: #e5e7eb; color: #4b5563; }   /* Gray */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+input, button {
+    outline: none;
+}
