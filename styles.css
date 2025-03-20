@@ -1,13 +1,8 @@
-/* Status Colors */
-.status-Buy { background-color: #d1fae5; color: #065f46; }   /* Green */
-.status-Sell { background-color: #fee2e2; color: #991b1b; }  /* Red */
-.status-Hold { background-color: #fef3c7; color: #92400e; }  /* Yellow */
-.status-N/A { background-color: #e5e7eb; color: #4b5563; }   /* Gray */
-
-/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
 }
 
 .container {
@@ -15,6 +10,25 @@ body {
     margin: auto;
 }
 
-input, button {
-    outline: none;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    width: 60%;
+    margin: 10px 0;
 }
