@@ -49,6 +49,11 @@ class StockDataManager {
         if (currentPrice === 0) return "N/A"; // No data
         return currentPrice > 1000 ? "Buy" : currentPrice > 500 ? "Hold" : "Sell";
     }
+    document.addEventListener("DOMContentLoaded", () => {
+    console.log("Stock Portfolio Tracker Loaded!");
+});
+
 }
+
 
 export const stockManager = new StockDataManager(STOCKS);
