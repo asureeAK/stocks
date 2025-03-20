@@ -36,8 +36,10 @@ async function fetchStockData() {
 
             let rowHtml = `
                 <tr>
+                    <td>${highLowPercent}%</td>
                     <td>${stockName}</td>
                     <td>${sector}</td>
+                    <td>${nseBse}</td>
                     <td>₹${price.toFixed(2)}</td>
                     <td style="color: ${change >= 0 ? 'green' : 'red'};">${change.toFixed(2)}%</td>
                     <td>${weekHigh}</td>
@@ -45,17 +47,17 @@ async function fetchStockData() {
                     <td>${weekLow}</td>
                     <td>${highPercent}%</td>
                     <td>${peRatio}</td>
-                    <td>${marketCap}</td>
+                    <td>${marketCapCore}</td>
                     <td>${eps}</td>
                     <td>${lowBased}%</td>
-                    <td>${status}</td>
                 </tr>
+
             `;
             stockTable.innerHTML += rowHtml;
         });
 
-        document.getElementById("total-value").textContent = `₹${totalValue.toFixed(2)}`;
-        document.getElementById("total-gain-loss").textContent = `₹${totalGainLoss.toFixed(2)}`;
+//        document.getElementById("total-value").textContent = `₹${totalValue.toFixed(2)}`;
+//        document.getElementById("total-gain-loss").textContent = `₹${totalGainLoss.toFixed(2)}`;
 
     } catch (error) {
         console.error("Error fetching stock data:", error);
